@@ -1,19 +1,9 @@
-format = """
-$username\
-$hostname\
-$directory\
-$git_branch\
-$git_state\
-$git_status\
-$git_metrics\
-$fill\
-$nodejs\
-$cmd_duration $jobs $time\
-$line_break\
-$character"""
-
-[nodejs]
+format = """\
+[╭╴](238)\
+$all[╰─](238)$character"""
+[c]
 format = "[$symbol($version )]($style)"
+disabled = true
 
 [fill]
 symbol = " "
@@ -25,9 +15,9 @@ truncation_length = 4
 truncate_to_repo = false
 
 [character]
-success_symbol = "[➜](purple)"
-error_symbol = "[➜](red)"
-vicmd_symbol = "[➜](green)"
+success_symbol = "[](purple)"
+error_symbol = "[](red)"
+vicmd_symbol = "[](green)"
 
 [git_branch]
 symbol = " "
@@ -39,7 +29,7 @@ symbol = ""
 style = "bold red"
 number_threshold = 1
 format = "[$symbol]($style)"
-
+disabled = true
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
 style = "cyan"
@@ -55,19 +45,3 @@ disabled = false
 format = "[$duration]($style)"
 style = "yellow"
 
-[memory_usage]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[time]
-disabled = false
-style = "bold white"
-format = "[$time]($style)"
-
-[custom.stunnel]
-when = "ps aux | grep stunnel | grep -v grep"
-command = "ps -o etime= -p $(ps aux | grep stunnel | grep -v grep | awk '{print $2}')"
-style = "red"
-format = "[TUNNEL OPEN for $output]($style)"
