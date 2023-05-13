@@ -139,12 +139,12 @@ ex ()
 alias ls="exa  -a  --icons --color=always --group-directories-first"
 alias la="exa -la --icons --color=always --group-directories-first"
 alias ll="exa -l --icons --color=always --group-directories-first"
-alias l.='exa -la --icons --color=always --group-directories-first | egrep "^\."'
+alias l.='exa -la --icons --color=always --group-directories-first --ignore-glob=[A-Za-z0-9]*'
 alias lt="exa -aT --icons --color=always --group-directories-first"
 alias ltt='lt --level'
 alias ..="cd ../"
 alias ...="cd ../.."
-alias .2="cd ..."
+alias .2="cd ../.."
 alias .3="cd ../../.."
 alias .4="cd ../../../.."
 # Colorize grep
@@ -158,7 +158,7 @@ alias free='free -m'
 
  # Processes
 alias pscpu='ps auxf | sort -nr -k 3'
-alias pscpu10='pc auxf | sort -nr -k 3 | head -10'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
 # git
 alias push='git push origin'
@@ -174,3 +174,5 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out!'"
 eval "$(starship init bash)"
 alias docker="sudo docker"
 alias pacman="sudo pacman"
+alias clipboard='xclip -sel clip'
+alias nitch='clear; nitch'
