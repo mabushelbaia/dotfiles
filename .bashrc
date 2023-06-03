@@ -176,3 +176,4 @@ alias docker="sudo docker"
 alias pacman="sudo pacman"
 alias clipboard='xclip -sel clip'
 alias nitch='clear; nitch'
+alias status='git status'
