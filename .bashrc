@@ -97,8 +97,10 @@ unset use_color safe_term match_lhs sh
 #alias more=less
 
 xhost +local:root > /dev/null 2>&1
-
 # Bash won't get SIGWINCH if another process is in the foreground.
+if [ -e $HOME/.bash_aliases ]; then
+    source $HOME/.bash_aliases
+fi
 # Enable checkwinsize so that bash will check the terminal size when
 # it regains control.  #65623
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
@@ -135,45 +137,4 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-# Directories and Navigation
-alias ls="exa  -a  --icons --color=always --group-directories-first"
-alias la="exa -la --icons --color=always --group-directories-first"
-alias ll="exa -l --icons --color=always --group-directories-first"
-alias l.='exa -la --icons --color=always --group-directories-first --ignore-glob=[A-Za-z0-9]*'
-alias lt="exa -aT --icons --color=always --group-directories-first"
-alias ltt='lt --level'
-alias ..="cd ../"
-alias ...="cd ../.."
-alias .2="cd ../.."
-alias .3="cd ../../.."
-alias .4="cd ../../../.."
-# Colorize grep
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-# Flags
-alias cp='cp -i'
-alias df='df -h'
-alias free='free -m'
-
- # Processes
-alias pscpu='ps auxf | sort -nr -k 3'
-alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
-
-# git
-alias push='git push origin'
-alias pull='git pull origin'
-alias status='git status'
-alias commit='git commit -m'
-alias addall='git add .'
-
-# switch shells
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out!'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out!'"
-#nitch
 eval "$(starship init bash)"
-alias docker="sudo docker"
-alias pacman="sudo pacman"
-alias clipboard='xclip -sel clip'
-alias nitch='clear; nitch'
-alias status='git status'
