@@ -14,6 +14,8 @@ read_only = " "
 truncation_length = 4
 truncate_to_repo = false
 
+[battery]
+disabled = true
 [character]
 success_symbol = "[](purple)"
 error_symbol = "[](red)"
