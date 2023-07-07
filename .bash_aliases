@@ -9,10 +9,10 @@ alias mkcd='mkcd_alias(){ mkdir -p "$1" && cd "$1"}'
 
 # List Directory
 alias l.='exa -laF --icons --color=always --group-directories-first --ignore-glob=[A-Za-z0-9]*'
-alias la='exa -laF --icons --color=always --group-directories-first'
-alias ll='exa -lF --icons --color=always --group-directories-first'
-alias ls='exa  -aF  --icons --color=always --group-directories-first'
-alias lt='exa -T --icons --color=always --group-directories-first'
+alias la='exa -aF --icons --color=always --group-directories-first'
+alias ll='exa -laF --icons --color=always --group-directories-first'
+alias ls='exa  -F --icons --color=always --group-directories-first'
+alias lt='exa -TF --icons --color=always --group-directories-first'
 alias ltt='lt --level'
 
 # Git & Github
