@@ -1,0 +1,13 @@
+{
+  "accentColor": "#ff6464",
+  "cssTheme": "AnuPpuccin",
+  "theme": "obsidian",
+  "interfaceFontFamily": "JetBrains Mono NL",
+  "enabledCssSnippets": [
+    "extended-colorschemes",
+    "minimal-cards",
+    "notion-cards"
+  ],
+  "textFontFamily": "JetBrains Mono",
+  "showViewHeader": true
+}

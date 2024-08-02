@@ -1,0 +1,8 @@
+{
+  "pinned": [
+    "theme:use-dark",
+    "theme:use-light",
+    "workspace:export-pdf",
+    "app:open-settings"
+  ]
+}
