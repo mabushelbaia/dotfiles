@@ -189,3 +189,4 @@ alias c='clear' \
     mkdir='mkdir -p' # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 
 alias hyde=Hyde
+export PATH="$HOME/.scripts:$PATH"
