@@ -11,6 +11,7 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
+    "power-profiles-daemon",
     "pulseaudio",
     "network",
     "temperature",
@@ -25,17 +26,23 @@
     },
     "separate-outputs": true
   },
-"hyprland/workspaces": {
-  "format": "{icon}",
-  "on-click": "activate",
-  "format-icons": {
-    "active": " "
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": " "
+    },
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "HDMI-A-1": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
   },
-  "sort-by-number": true,
-  "persistent-workspaces": {
-    "HDMI-A-1": [1, 2, 3, 4, 5]
-  }
-},
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
@@ -101,5 +108,16 @@
       ]
     },
     "on-click": "pavucontrol"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+"format-icons": {
+  "default": "",  
+  "performance": " ",  
+  "balanced": " ",  
+  "power-saver": " "  
+}
   }
 }
