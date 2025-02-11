@@ -94,7 +94,7 @@ button:hover {
 .modules-left,
 .modules-center {
   background-color: @base;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .modules-right {
@@ -111,7 +111,7 @@ button:hover {
 
 #battery.charging,
 #battery.plugged {
-  color: @sapphire;
+  color: @sky;
 }
 
 @keyframes blink {
