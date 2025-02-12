@@ -15,7 +15,8 @@
     "pulseaudio",
     "network",
     "battery",
-    "clock"
+    "clock",
+    "temperature"
   ],
   "hyprland/window": {
     "format": "󰣇 {}",
