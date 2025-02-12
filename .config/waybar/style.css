@@ -1,51 +1,18 @@
-
-@define-color red #ed8796;
-@define-color peach #f5a97f;
-@define-color white #ffffff;
-
-@define-color lavender #b8a1e3;
-
-@define-color text #cad3f5;
-@define-color subtext1 #b8c0e0;
-@define-color subtext0 #a5adcb;
-@define-color overlay2 #939ab7;
-@define-color overlay1 #8087a2;
-@define-color overlay0 #6e738d;
-@define-color surface2 #5b6078;
-@define-color surface1 #494d64;
-@define-color surface0 #363a4f;
-@define-color base #171717;
+@import "theme.css";
 
 
 * {
-  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
   font-size: 11px;
+  min-height: 10px;
 }
+
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 13px;
-  transition-property: background-color;
-  transition-duration: .5s;
-}
-
-button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
-  border: none;
-  border-radius: 0;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-  background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-  background-color: @surface2;
+  background: @bar-bg;
 }
 
 #workspaces button {
@@ -54,104 +21,139 @@ button:hover {
   color: #ffffff;
 }
 
-
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.focused {
-  background-color: @lavender;
   box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button.urgent {
   background-color: #eb4d4b;
 }
-
-#mode {
-  background-color: #64727D;
-  box-shadow: inset 0 -3px #ffffff;
+#taskbar button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 9px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 0px;
+  color: @wb-color;
+  animation: tb_normal 20s ease-in-out 1;
 }
 
-#clock,
+#taskbar button.active {
+  background: @wb-act-bg;
+  color: @wb-act-color;
+  margin-left: 3px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 3px;
+  animation: tb_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button:hover {
+  background: @wb-hvr-bg;
+  color: @wb-hvr-color;
+  animation: tb_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#tray menu * {
+  min-height: 16px;
+}
+
+#tray menu separator {
+  min-height: 10px;
+}
+#power-profiles-daemon,
+#backlight,
 #battery,
+#bluetooth,
+#custom-cava,
+#custom-cliphist,
+#clock,
+#clock,
+#custom-cpuinfo,
 #cpu,
+#custom-github_hyde,
+#custom-gpuinfo,
+#custom-hyprsunset,
+#idle_inhibitor,
+#custom-keybindhint,
+#language,
 #memory,
-#temperature,
+#mpris,
 #network,
-#pulseaudio {
-  padding: 0 10px;
+#custom-notifications,
+#custom-power,
+#privacy,
+#pulseaudio,
+#custom-spotify,
+#taskbar,
+#taskbar,
+#taskbar#windows,
+#custom-theme,
+#tray,
+#custom-updates,
+#custom-wallchange,
+#custom-wbar,
+#custom-weather,
+#window,
+#workspaces,
+#workspaces,
+#workspaces,
+#custom-l_end,
+#custom-r_end,
+#custom-sl_end,
+#custom-sr_end,
+#custom-rl_end,
+#battery,
+#custom-rr_end {
+  color: @main-fg;
+  background: @main-bg;
+  opacity: 1;
+
 }
 
-#pulseaudio {
-  color: @white;
+#custom-r_end {
+  border-radius: 0px 10px 10px 0px;
+  margin-right: 9px;
+  padding-right: 3px;
 }
 
-#network {
-  color: @white;
+#custom-l_end {
+  border-radius: 10px 0px 0px 10px;
+  margin-left: 9px;
+  padding-left: 3px;
 }
 
-#temperature {
-  color: @white;
+#custom-sr_end {
+  border-radius: 0px;
+  margin-right: 9px;
+  padding-right: 3px;
 }
 
-#battery {
-  color: @white;
+#custom-sl_end {
+  border-radius: 0px;
+  margin-left: 9px;
+  padding-left: 3px;
 }
 
-#clock {
-  color: @white;
+#custom-rr_end {
+  border-radius: 0px 7px 7px 0px;
+  margin-right: 9px;
+  padding-right: 3px;
 }
 
-#window {
-  color: @white;
-}
-
-.modules-right,
-.modules-left,
-.modules-center {
-  background-color: @base;
-  border-radius: 10px;
-}
-
-.modules-right {
-  padding: 0 10px;
-}
-
-.modules-left {
-  padding: 0 20px;
-}
-
-.modules-center {
-  padding: 0 10px;
-}
-
-#battery.charging,
-#battery.plugged {
-  color: @sky;
-}
-
-@keyframes blink {
-  to {
-    color: #000000;
-  }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-label:focus {
-  background-color: #000000;
-}
-
-#pulseaudio.muted {
-  color: @text;
+#custom-rl_end {
+  border-radius: 7px 0px 0px 7px;
+  margin-left: 9px;
+  padding-left: 3px;
 }
