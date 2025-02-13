@@ -36,7 +36,7 @@
   //   "temperature",
   // ],
   "hyprland/window": {
-    "format": "󰣇 {}",
+    "format": "󰣇 {initialTitle}",
     "max-length": 35,
     "rewrite": {
       "󰣇 ": "󰣇 mabushelbaia"
