@@ -1,0 +1,243 @@
+{
+  "hyprland/window": {
+    "format": "󰣇 {initialTitle}",
+    "max-length": 35,
+    "rewrite": {
+      "󰣇 ": "󰣇 mabushelbaia"
+    },
+    "separate-outputs": true
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ar": "AR",
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": " "
+    },
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "HDMI-A-1": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "eDP-1": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂳",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip": true,
+    "on-click": "blueman-manager",
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "interval": 10,
+    "consume-icons": {
+      "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon} ",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "network": {
+    "tooltip": true,
+    "format-wifi": " ",
+    "rotate": 0,
+    "format-ethernet": "󰈀 ",
+    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪 ",
+    "tooltip-format-disconnected": "Disconnected",
+    "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+    "interval": 2,
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": " ",
+      "balanced": " ",
+      "power-saver": " "
+    }
+  },
+  "custom/l_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/r_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sl_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sr_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/rl_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/rr_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/padd": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "memory": {
+    "states": {
+      "c": 90, // critical
+      "h": 60, // high
+      "m": 30 // medium
+    },
+    "interval": 30,
+    "format": "󰾆 {used}GB",
+    "rotate": 0,
+    "format-m": " 󰾅 {used}GB",
+    "format-h": "󰓅 {used}GB",
+    "format-c": " {used}GB",
+    "format-alt": "󰾆 {percentage}%",
+    "max-length": 10,
+    "tooltip": true,
+    "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+  },
+  "custom/cpuinfo": {
+    "exec": "$HOME/.scripts/cpuinfo.sh",
+    "return-type": "json",
+    "format": "{}",
+    "rotate": 0,
+    "interval": 5, // once every 5 seconds
+    "tooltip": true,
+    "max-length": 1000
+  },
+  "custom/gpuinfo": {
+    "exec": "$HOME/.scripts/gpuinfo.sh --use amd ",
+    "return-type": "json",
+    "format": "{}",
+    "rotate": 0,
+    "interval": 5, // once every 5 seconds
+    "tooltip": true,
+    "max-length": 1000,
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 3
+  },
+  "keyboard-state": {
+    "numlock": false,
+    "capslock": true,
+    "format": {
+      "capslock": "{icon}",
+    },
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    },
+    "binding-keys": [
+      58,
+      69,
+      70
+    ]
+  },
+  "custom/gpuinfo#nvidia": {
+    "exec": "$HOME/.scripts/gpuinfo.sh --use nvidia ",
+    "return-type": "json",
+    "format": "{}",
+    "rotate": 0,
+    "interval": 5, // once every 5 seconds
+    "tooltip": true,
+    "max-length": 1000,
+  }
+}

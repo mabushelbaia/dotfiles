@@ -4,173 +4,35 @@
   "margin-left": 10,
   "margin-right": 10,
   "height": 30,
+  "include": "~/.config/waybar/modules.jsonc",
   "modules-right": [
     "custom/l_end",
+    "clock",
+    "custom/r_end",
+    "custom/l_end",
+    "power-profiles-daemon",
     "network",
     "pulseaudio",
     "custom/r_end",
     "custom/l_end",
-    "power-profiles-daemon",
+    "custom/cpuinfo",
+    "custom/gpuinfo",
     "battery",
     "custom/r_end",
     "custom/l_end",
-    "clock",
-    "custom/r_end",
+    "keyboard-state",
+    "hyprland/language",
+    "custom/r_end"
   ],
   "modules-left": [
+    "custom/l_end",
+    "hyprland/workspaces",
+    "custom/r_end",
     "custom/l_end",
     "hyprland/window",
     "custom/r_end"
   ],
   "modules-center": [
-    "custom/l_end",
-    "hyprland/workspaces",
-    "custom/r_end",
-  ],
-  // "modules-right": [
-  //   "power-profiles-daemon",
-  //   "pulseaudio",
-  //   "network",
-  //   "battery",
-  //   "clock",
-  //   "temperature",
-  // ],
-  "hyprland/window": {
-    "format": "󰣇 {initialTitle}",
-    "max-length": 35,
-    "rewrite": {
-      "󰣇 ": "󰣇 mabushelbaia"
-    },
-    "separate-outputs": true
-  },
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "format-icons": {
-      "active": " "
-    },
-    "sort-by-number": true,
-    "persistent-workspaces": {
-      "HDMI-A-1": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "eDP-1": [
-        1,
-        2,
-        3
-      ]
-    }
-  },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
-  },
-
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-full": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon} ",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  "network": {
-    "tooltip": true,
-    "format-wifi": "  ",
-    "rotate": 0,
-    "format-ethernet": "󰈀 ",
-    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-    "format-linked": "󰈀 {ifname} (No IP)",
-    "format-disconnected": "󰖪 ",
-    "tooltip-format-disconnected": "Disconnected",
-    "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
-    "interval": 2,
-  },
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    },
-    "on-click": "pavucontrol"
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": " ",
-      "balanced": " ",
-      "power-saver": " "
-    }
-  },
-  "custom/l_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/r_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/sl_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/sr_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/rl_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/rr_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/padd": {
-    "format": "  ",
-    "interval": "once",
-    "tooltip": false
-  }
+    // didn't decide what to put here yet
+  ]
 }

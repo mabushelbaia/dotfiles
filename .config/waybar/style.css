@@ -116,6 +116,7 @@ window#waybar {
 #custom-sr_end,
 #custom-rl_end,
 #battery,
+#keyboard-state,
 #custom-rr_end {
   color: @main-fg;
   background: @main-bg;
@@ -124,10 +125,10 @@ window#waybar {
 
 #custom-r_end {
   border-radius: 0px 10px 10px 0px;
-  margin-right: 9px;
+  margin-right: 3px;
 }
 
 #custom-l_end {
   border-radius: 10px 0px 0px 10px;
-  margin-left: 9px;
+  margin-left: 3px;
 }
