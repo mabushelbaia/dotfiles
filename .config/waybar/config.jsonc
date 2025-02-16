@@ -31,8 +31,5 @@
     "custom/l_end",
     "hyprland/window",
     "custom/r_end"
-  ],
-  "modules-center": [
-    // didn't decide what to put here yet
   ]
 }
