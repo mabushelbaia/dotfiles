@@ -62,13 +62,13 @@ init_query() {
 get_temp_color() {
     local temp=$1
     declare -A temp_colors=(
-        [90]="#8b0000" # Dark Red for 90 and above
-        [85]="#ad1f2f" # Red for 85 to 89
-        [80]="#d22f2f" # Light Red for 80 to 84
-        [75]="#ff471a" # Orange-Red for 75 to 79
-        [70]="#ff6347" # Tomato for 70 to 74
-        [65]="#ff8c00" # Dark Orange for 65 to 69
-        [60]="#ffa500" # Orange for 60 to 64
+        [100]="#8b0000" # Dark Red for 90 and above
+        [95]="#ad1f2f" # Red for 85 to 89
+        [90]="#d22f2f" # Light Red for 80 to 84
+        [85]="#ff471a" # Orange-Red for 75 to 79
+        [80]="#ff6347" # Tomato for 70 to 74
+        [75]="#ff8c00" # Dark Orange for 65 to 69
+        [70]="#ffa500" # Orange for 60 to 64
         [45]=""        # No color for 45 to 59
         [40]="#add8e6" # Light Blue for 40 to 44
         [35]="#87ceeb" # Sky Blue for 35 to 39
